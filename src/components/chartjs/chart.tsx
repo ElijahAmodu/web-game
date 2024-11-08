@@ -36,8 +36,8 @@ const ChartComponent = ({ onDataUpdate }: ChartComponentProps) => {
       0,
       chartRef.current.height
     );
-    fillGradient.addColorStop(1, "#2C315766");
-    fillGradient.addColorStop(0, "#b2f0b666");
+    // fillGradient.addColorStop(1, "#2C315766");
+    fillGradient.addColorStop(1, "#b2f0b666");
 
     const DATA_COUNT = 6;
     // const labels = Array.from({ length: DATA_COUNT }, (_, i) => i.toString());
@@ -93,7 +93,7 @@ const ChartComponent = ({ onDataUpdate }: ChartComponentProps) => {
           },
           y: {
             display: true,
-            suggestedMin: 0,
+            suggestedMin: 0.1,
             suggestedMax: 1.8,
             grid: {
               display: false,
@@ -123,7 +123,7 @@ const ChartComponent = ({ onDataUpdate }: ChartComponentProps) => {
 
       // const newData = datapoints[datapoints.length - 1] + 2;
       const t = datapoints.length;
-      const newData = 0.5 * t * t;
+      const newData = 0.01 * t * t;
       datapoints.push(newData);
       setLatestDisplayData(newData);
 
