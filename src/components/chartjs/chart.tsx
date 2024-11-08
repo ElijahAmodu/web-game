@@ -12,6 +12,7 @@ interface ChartComponentProps {
 const ChartComponent = ({ onDataUpdate }: ChartComponentProps) => {
   const chartRef = useRef<HTMLCanvasElement | null>(null);
   const chartInstance = useRef<Chart | null>(null);
+  const labels: string[] = [];
 
   //I'm using this as a store for the odd value as it changes
   const [latestDisplayData, setLatestDisplayData] = useState<number>(0);
@@ -39,12 +40,9 @@ const ChartComponent = ({ onDataUpdate }: ChartComponentProps) => {
     // fillGradient.addColorStop(1, "#2C315766");
     fillGradient.addColorStop(1, "#b2f0b666");
 
-    const DATA_COUNT = 6;
-    // const labels = Array.from({ length: DATA_COUNT }, (_, i) => i.toString());
-    const labels = Array.from(
-      { length: DATA_COUNT },
-      (_, i) => `${i.toString()}s`
-    );
+    // const DATA_COUNT = 6;
+    // const labels = Array.from({ length: DATA_COUNT }, (_, i) => `${i}s`);
+    // const labels = Array.from({ length: DATA_COUNT }, (_, i) => `${i + 1}s`);
 
     const data = {
       labels: labels,
@@ -126,6 +124,9 @@ const ChartComponent = ({ onDataUpdate }: ChartComponentProps) => {
       const newData = 0.01 * t * t;
       datapoints.push(newData);
       setLatestDisplayData(newData);
+
+      labels.push(`${t + 1}s`);
+      chartInstance.current.data.labels = labels;
 
       if (datapoints.length > labels.length) {
         chartInstance.current.data.labels?.push(datapoints.length - 1);
