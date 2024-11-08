@@ -149,7 +149,7 @@ const ChartComponent = ({ onDataUpdate }: ChartComponentProps) => {
 
   return (
     <div className=" bg-gradient-radial from-[#3C4065] via-[#252C56] to-[#23284E] rounded-2xl pl-[12px] lg:pl-[22px] pb-[31px] pt-[62px] pr-[21px] lg:pr-[56px] lg:min-h-">
-      <canvas ref={chartRef} className="bg-[]" />
+      <canvas ref={chartRef} className="" />
     </div>
   );
 };
