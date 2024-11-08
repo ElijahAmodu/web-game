@@ -1,0 +1,54 @@
+div[aria-labelledby="rk_connect_title"][role="dialog"] div {
+  font-weight: 400;
+  border-image-width: 0;
+}
+
+div[aria-labelledby="rk_connect_title"][role="dialog"] button > div {
+  font-weight: 600 !important;
+}
+
+#rk_connect_title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+div[aria-labelledby="rk_connect_title"][role="dialog"]
+  button
+  > div
+  > div
+  > div
+  > div {
+  border: none;
+}
+
+div[aria-labelledby="rk_connect_title"][role="dialog"]
+  div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div:nth-child(1) {
+  color: white;
+  font-weight: 500;
+}
+
+div[aria-labelledby="rk_connect_title"][role="dialog"]
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div:nth-child(1):has(button) {
+  display: block;
+}
+
+button[aria-label="Close"] {
+  background-color: transparent;
+  color: white;
+  border: none !important;
+}
