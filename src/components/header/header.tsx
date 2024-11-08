@@ -4,6 +4,7 @@ import { useAccount } from "wagmi";
 import { truncateAddress } from "@/lib/utils";
 // import useWalletIconPersist from "../providers/useWalletIconPersist";
 import { useConnectModal, useAccountModal } from "@rainbow-me/rainbowkit";
+import Image from "next/image";
 
 const Header = () => {
   const { address } = useAccount();
@@ -14,26 +15,40 @@ const Header = () => {
   return (
     <div className="flex items-center justify-between w-full p-4 ">
       <div>
-        <img src="/icons/logo.svg" alt="logo" className="" />
+        <Image src="/icons/logo.svg" alt="logo" className="" />
       </div>
 
       <div className="grid grid-flow-col place-content-end gap-3 w-full">
         <div className="bg-blue-400 p-[7px]  rounded-[8px] w-fit relative hidden md:block">
-          <img
+          <Image
             src="/icons/purple-star.svg"
             alt="star"
+            width={16}
+            height={16}
             className="absolute right-2"
           />
           <Search className="text-blue-300" />
         </div>
 
         <div className=" bg-blue-400 p-[8px] rounded-[8px] grid place-content-center w-fit">
-          <img src="/icons/pepper-token.svg" alt="logo" className="w-4 h-4" />
+          <Image
+            src="/icons/pepper-token.svg"
+            alt="logo"
+            width={95}
+            height={32}
+            className="w-4 h-4"
+          />
         </div>
 
         <div className=" bg-none md:bg-blue-400 rounded-[8px] max-w-[291px] w-full flex items-center justify-between pl-2 pr-1 py-1 ">
           <div className="hidden md:flex items-center gap-[4px]">
-            <img src="/icons/pepper-token.svg" alt="logo" className="w-4 h-4" />
+            <Image
+              src="/icons/pepper-token.svg"
+              alt="logo"
+              width={16}
+              height={16}
+              className="w-4 h-4"
+            />
             <p className="text-xs font-bold">0 PEPR</p>
           </div>
 
@@ -84,18 +99,22 @@ const Header = () => {
         </div>
 
         <div className="bg-blue-400 rounded-[8px] px-[9.56px] py-[9px] w-fit flex items-center">
-          <img
+          <Image
             src="/icons/gift-box.svg"
             alt="gift"
+            width={13}
+            height={14.2}
             className="w-[13px] h-[14.2px]"
           />
         </div>
 
         <div className="bg-blue-400 rounded-[8px] px-[9.56px] py-[9px] w-fit relative hidden md:flex items-center ">
           <div className="bg-blue-200 w-1 h-1 rounded-full absolute top-3 right-[9px]" />
-          <img
+          <Image
             src="/icons/notification.svg"
             alt="gift"
+            width={13}
+            height={14.2}
             className="w-[13px] h-[14.2px]"
           />
         </div>

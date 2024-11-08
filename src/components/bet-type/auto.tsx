@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const AutoBet = () => {
   return (
@@ -13,7 +14,13 @@ const AutoBet = () => {
 
           <div className="flex  gap-1">
             <div className="py-[4px] px-[14px]">
-              <img src="/icons/eye.svg" alt="eye" className="w-4 h-4" />
+              <Image
+                src="/icons/eye.svg"
+                alt="eye"
+                width={16}
+                height={16}
+                className="w-4 h-4"
+              />
             </div>
 
             <span className="rounded-[4px] bg-[#39426D] text-xs font-bold py-[5px] px-[11px]">
@@ -27,7 +34,13 @@ const AutoBet = () => {
 
           <div className="flex  gap-1">
             <div className="py-[4px] px-[14px]">
-              <img src="/icons/eye.svg" alt="eye" className="w-4 h-4" />
+              <Image
+                src="/icons/eye.svg"
+                alt="eye"
+                width={16}
+                height={16}
+                className="w-4 h-4"
+              />
             </div>
 
             <span className="rounded-[4px] bg-[#39426D] text-xs font-bold py-[5px] px-[11px]">
@@ -41,7 +54,13 @@ const AutoBet = () => {
 
           <div className="flex  gap-1">
             <div className="py-[4px] px-[14px]">
-              <img src="/icons/eye.svg" alt="eye" className="w-4 h-4" />
+              <Image
+                src="/icons/eye.svg"
+                alt="eye"
+                width={16}
+                height={16}
+                className="w-4 h-4"
+              />
             </div>
 
             <span className="rounded-[4px] bg-[#39426D] text-xs font-bold py-[5px] px-[11px]">
@@ -56,7 +75,13 @@ const AutoBet = () => {
       </div>
 
       <div className="flex items-center gap-1 pl-[14px] mt-[19px]">
-        <img src="/icons/alert.svg" alt="alert" className="" />
+        <Image
+          src="/icons/alert.svg"
+          alt="alert"
+          width={16}
+          height={16}
+          className=""
+        />
         <p className="text-[#A4A9C2] text-[10px] font-normal">
           Use of script is optional and players must take full responsibility
           for any attendant risks. We will not be held liable in this regard.{" "}

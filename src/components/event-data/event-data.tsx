@@ -1,5 +1,6 @@
 import React from "react";
 import { ScrollArea } from "../ui/scroll-area";
+import Image from "next/image";
 
 const dummyEventData = [
   {
@@ -88,7 +89,13 @@ const EventData = () => {
       <div className="bg-blue-100 rounded-t-xl flex justify-around items-center w-full px-4 py-[18px]">
         <p className="text-xs font-bold pr-14 ">Classic</p>
         <span className="text-yellow-400 text-[10px] font-bold flex gap-1 text-nowrap pr-6">
-          <img src="/icons/user.svg" alt="user" className="w-[10px] h-[10px]" />
+          <Image
+            src="/icons/user.svg"
+            alt="user"
+            width={10}
+            height={10}
+            className="w-[10px] h-[10px]"
+          />
           6950/325964 Players
         </span>
         <p className="text-[10px] font-bold">₦34,455,689.49</p>
@@ -123,17 +130,21 @@ const EventData = () => {
                 <p>{item.cashout}</p>
               </span>
               <span className="flex gap-1 flex-1 text-blue-800">
-                <img
+                <Image
                   src="/icons/pepper-token.svg"
                   alt="pepper token"
+                  width={16}
+                  height={16}
                   className="w-4 h-4"
                 />
                 <p>{item.amount}</p>
               </span>
               <span className="flex gap-1 flex-1 text-blue-800">
-                <img
+                <Image
                   src="/icons/pepper-token.svg"
                   alt="pepper token"
+                  width={16}
+                  height={16}
                   className="w-4 h-4"
                 />
                 <p>{item.profit}</p>

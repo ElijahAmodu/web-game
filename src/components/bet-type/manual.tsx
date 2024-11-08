@@ -1,5 +1,6 @@
 import React from "react";
 import { ChevronLeft, ChevronRight, ChevronsUpDown } from "lucide-react";
+import Image from "next/image";
 
 const ManualBet = () => {
   return (
@@ -12,9 +13,11 @@ const ManualBet = () => {
           <p className="text-xs font-bold text-blue-600">Amount</p>
           <div className="bg-[#252D4A] p-2 rounded-lg w-full flex items-center">
             <div className="flex items-center gap-2">
-              <img
+              <Image
                 src="/icons/pepper-token.svg"
                 alt="token"
+                width={20}
+                height={20}
                 className="w-5 h-5"
               />
               <input
