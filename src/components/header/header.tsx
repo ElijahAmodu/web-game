@@ -1,14 +1,13 @@
 import React from "react";
 import { ChevronDown, Search } from "lucide-react";
 import { useAccount } from "wagmi";
-import Image from "next/image";
 import { truncateAddress } from "@/lib/utils";
-import useWalletIconPersist from "../providers/useWalletIconPersist";
+// import useWalletIconPersist from "../providers/useWalletIconPersist";
 import { useConnectModal, useAccountModal } from "@rainbow-me/rainbowkit";
 
 const Header = () => {
-  const { address, isConnected } = useAccount();
-  const walletIcon = useWalletIconPersist();
+  const { address } = useAccount();
+  // const walletIcon = useWalletIconPersist();
   const { openConnectModal } = useConnectModal();
   const { openAccountModal } = useAccountModal();
 
