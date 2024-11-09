@@ -11,7 +11,7 @@ const useWalletIconPersist = () => {
     if (storedIcon) {
       setPersistIcon(storedIcon);
     }
-  }, []);
+  }, [setPersistIcon]);
 
   return persistIcon || "/icons/crypto-small.svg";
 };

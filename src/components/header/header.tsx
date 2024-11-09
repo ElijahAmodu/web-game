@@ -15,7 +15,13 @@ const Header = () => {
   return (
     <div className="flex items-center justify-between w-full p-4 ">
       <div>
-        <Image src="/icons/logo.svg" alt="logo" className="" />
+        <Image
+          src="/icons/logo.svg"
+          width={95}
+          height={32}
+          alt="logo"
+          className=""
+        />
       </div>
 
       <div className="grid grid-flow-col place-content-end gap-3 w-full">

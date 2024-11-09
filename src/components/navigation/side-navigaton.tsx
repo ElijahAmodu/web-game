@@ -1,6 +1,7 @@
 import { useMoonStore } from "@/store/store";
 import { ChevronDown } from "lucide-react";
 import React from "react";
+import Image from "next/image";
 
 enum SideTab {
   casino = "casino",
@@ -26,7 +27,13 @@ const SideNav = () => {
         }`}
       >
         <div className=" flex gap-1">
-          <img src="/icons/casino.svg" alt="casino" className="" />
+          <Image
+            src="/icons/casino.svg"
+            alt="casino"
+            width={24}
+            height={24}
+            className=""
+          />
           <p className="text-base font-bold ">Casino</p>
         </div>
         <ChevronDown className="text-white" />
@@ -42,7 +49,13 @@ const SideNav = () => {
         }`}
       >
         <div className=" flex gap-1">
-          <img src="/icons/lottery.svg" alt="casino" className="" />
+          <Image
+            src="/icons/lottery.svg"
+            alt="casino"
+            width={24}
+            height={24}
+            className=""
+          />
           <p className="text-base font-bold ">Lottery</p>
         </div>
         <ChevronDown className="text-white" />
@@ -58,7 +71,13 @@ const SideNav = () => {
         }`}
       >
         <div className=" flex gap-1">
-          <img src="/icons/sport.svg" alt="casino" className="" />
+          <Image
+            src="/icons/sport.svg"
+            alt="casino"
+            width={24}
+            height={24}
+            className=""
+          />
           <p className="text-base font-bold ">Sport</p>
         </div>
         <ChevronDown className="text-white" />

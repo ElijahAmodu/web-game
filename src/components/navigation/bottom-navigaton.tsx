@@ -4,6 +4,7 @@ import type React from "react";
 import appRoutes from "@/lib/landing.routes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const BottomNavbar = () => {
   const pathname = usePathname();
@@ -23,7 +24,13 @@ const BottomNavbar = () => {
                       : "text-gray-300"
                   }`}
                 >
-                  <img src={link?.image} alt={link?.image} className="" />
+                  <Image
+                    src={link?.image}
+                    alt={link?.image}
+                    width={26}
+                    height={10}
+                    className=""
+                  />
                 </Link>
               </div>
             );
