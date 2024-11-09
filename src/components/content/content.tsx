@@ -22,8 +22,13 @@ const Content = () => {
       <div className="bg-blue-25 flex flex-col 2xl:flex-row gap-[15px] w-full pt-10 px-[10px] lg:pl-[53px] lg:pr-[79px] min-h-screen">
         <div className="w-full relative rounded-2xl">
           <div className="absolute left-1/2 top-1/4 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
-            <p className="text-2xl">{oddValue}x</p>
+            <p className="text-5xl font-bold">{oddValue}x</p>
           </div>
+          {oddValue >= 98 && (
+            <div className="absolute left-1/2 top-1/3 transform -translate-x-1/2 -translate-y-1/2 text-center z-10 bg-blue-950 rounded-[8px] py-[7.5px] px-[13.5px]">
+              <p className="text-s font-bold text-[#BCC4E9] ">Crashed</p>
+            </div>
+          )}
           <ChartComponent onDataUpdate={handleDataUpdate} />
           <Bet />
         </div>
