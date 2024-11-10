@@ -159,7 +159,7 @@ const ChartComponent = ({ onDataUpdate }: ChartComponentProps) => {
       }
 
       chartInstance.current.update();
-    }, 500);
+    }, 100);
 
     return () => {
       clearInterval(interval);
