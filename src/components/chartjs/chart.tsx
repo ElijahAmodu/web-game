@@ -89,7 +89,7 @@ const ChartComponent = ({ onDataUpdate }: ChartComponentProps) => {
           y: {
             display: true,
             suggestedMin: 0.1,
-            suggestedMax: 1.8,
+            suggestedMax: 10,
             grid: {
               display: false,
             },
@@ -116,7 +116,7 @@ const ChartComponent = ({ onDataUpdate }: ChartComponentProps) => {
       if (!chartInstance.current) return;
 
       const t = datapoints.length;
-      let newData = 0.01 * t * t;
+      let newData = 0.001 * t * t;
 
       if (newData >= 100) {
         clearInterval(interval);
